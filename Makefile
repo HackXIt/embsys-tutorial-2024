@@ -1,7 +1,7 @@
 all:
 	$(MAKE) -C ./Session02 -j
 
-session2:
+Session02:
 	$(MAKE) -C ./Session02 -j
 
 clean:

@@ -22,6 +22,7 @@
             "serverpath": "${env:OPENOCD_DIR}/openocd",
             "svdFile": "${env:STM32L4_SVD_DIR}/STM32L4x2.svd",
             "rtos": "FreeRTOS",
+            "preLaunchTask": "build"
         }
     ]
 }
