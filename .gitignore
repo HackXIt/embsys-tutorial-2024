@@ -1,6 +1,7 @@
 # IDE specific
 .metadata
 */Debug
+.vscode/.history
 
 # Prerequisites
 *.d

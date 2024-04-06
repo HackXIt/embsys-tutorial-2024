@@ -1,0 +1,35 @@
+{
+    "folders": [
+        {
+            "name": "Root",
+            "path": ".."
+        },
+        {
+            "name": "Template",
+            "path": "../template"
+        },
+        {
+            "name": "Session01",
+            "path": "../Session01"
+        },
+        {
+            "name": "Session02",
+            "path": "../Session02"
+        }
+    ],
+    "settings": {
+        "files.exclude": {
+            "**/.git": true,
+            "**/.svn": true,
+            "**/.hg": true,
+            "**/CVS": true,
+            "**/.DS_Store": true,
+            "**/Thumbs.db": true,
+            "**/.vscode/.history": true,
+            // Exclude workspace folders from root
+            "Template/": true,
+            "Session01/": true,
+            "Session02/": true
+        }
+    }
+}
