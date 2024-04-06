@@ -30,6 +30,23 @@
             "Template/": true,
             "Session01/": true,
             "Session02/": true
-        }
+        },
+        "todo-tree.filtering.excludeGlobs": [
+            // Exclude all files created by the STM32CubeMX tool or compilation
+            "**/Drivers/**",
+            "**/Middlewares/**",
+            "**/Debug/**",
+            "**/build/**",
+            "**/Core/Startup/**",
+            "**/Core/*/stm32*"
+        ],
+        "makefile.makefilePath": "",
+        "makefile.launchConfigurations": [
+            {
+                "cwd": "c:\\Users\\rini\\DATA\\git-stash\\embsys-tutorial-2024\\Session02\\build",
+                "binaryPath": "c:\\Users\\rini\\DATA\\git-stash\\embsys-tutorial-2024\\Session02\\build\\Session02.elf",
+                "binaryArgs": []
+            }
+        ]
     }
 }

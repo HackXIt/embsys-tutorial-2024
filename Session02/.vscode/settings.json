@@ -1,0 +1,5 @@
+{
+    "makefile.makefilePath": "${workspaceFolder}/Session02/Makefile",
+    "makefile.makePath": "${env:MAKE_DIR}",
+    "makefile.makeDirectory": "${workspaceFolder}/Session02",
+}

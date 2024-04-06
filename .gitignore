@@ -2,6 +2,8 @@
 .metadata
 */Debug
 .vscode/.history
+*/.vscode/.history
+*/build
 
 # Prerequisites
 *.d
