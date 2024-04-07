@@ -12,8 +12,8 @@
 #include "FreeRTOS.h"
 #include "printf.h"
 
-#include "step2_producer.h"
-#include "step3_monitor.h"
+#include "step3_producer.h"
+#include "step4_monitor.h"
 
 #define NUM_PRODUCERS 3
 

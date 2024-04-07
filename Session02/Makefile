@@ -73,9 +73,9 @@ Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c \
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c \
 Core/Src/assignment_main.c \
 Core/Src/step1_taskmanagement.c \
-Core/Src/step2_producer.c \
-Core/Src/step3_monitor.c \
-Core/Src/step4_messaging.c \
+Core/Src/step3_producer.c \
+Core/Src/step4_monitor.c \
+Core/Src/step2_messaging.c \
 Core/Src/printf.c \
 Core/Src/uart_helper.c
 

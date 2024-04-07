@@ -10,7 +10,7 @@
 
 #include "cmsis_os2.h"
 #include "FreeRTOS.h"
-#include "step4_messaging.h"
+#include "step2_messaging.h"
 
 #define PRODUCER_STACK_SIZE 128
 #define INITIAL_DELAY 1000

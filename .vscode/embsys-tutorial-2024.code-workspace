@@ -51,7 +51,8 @@
         "files.associations": {
             "*.robot": "robotframework",
             "step1_taskmanagement.h": "c",
-            "type_traits": "c"
+            "type_traits": "c",
+            "step3_producer.h": "c"
         }
     }
 }
