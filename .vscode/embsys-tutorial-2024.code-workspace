@@ -47,6 +47,11 @@
                 "binaryPath": "c:\\Users\\rini\\DATA\\git-stash\\embsys-tutorial-2024\\Session02\\build\\Session02.elf",
                 "binaryArgs": []
             }
-        ]
+        ],
+        "files.associations": {
+            "*.robot": "robotframework",
+            "step1_taskmanagement.h": "c",
+            "type_traits": "c"
+        }
     }
 }

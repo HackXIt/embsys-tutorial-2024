@@ -1,27 +1,27 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file    usart.c
-  * @brief   This file provides code for the configuration
-  *          of the USART instances.
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2024 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * @file    usart.c
+ * @brief   This file provides code for the configuration
+ *          of the USART instances.
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2024 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "usart.h"
 
 /* USER CODE BEGIN 0 */
-
+#include "printf.h"
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart2;
@@ -137,9 +137,10 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 /* USER CODE BEGIN 1 */
 void _putchar(char character)
 {
-	// send char to console etc.
-	HAL_UART_Transmit_IT(&huart2, (uint8_t*)&character, 1);
-	// Wait until TransmissionComplete (TC) flag is set
-	while(!(huart2.Instance->ISR & USART_ISR_TC));
+    // send char to console etc.
+    HAL_UART_Transmit_IT(&huart2, (uint8_t *)&character, 1);
+    // Wait until TransmissionComplete (TC) flag is set
+    while (!(huart2.Instance->ISR & USART_ISR_TC))
+        ;
 }
 /* USER CODE END 1 */

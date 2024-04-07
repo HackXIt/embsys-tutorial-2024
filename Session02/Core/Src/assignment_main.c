@@ -5,4 +5,10 @@
  *      Author: RINI
  */
 
+#include "assignment_main.h"
 
+void StartDefaultTask(void *argument)
+{
+    CreateTasks();
+    osThreadExit();
+}
