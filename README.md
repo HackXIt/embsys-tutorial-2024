@@ -1,6 +1,8 @@
 # embsys-tutorial-2024
 A repository containing various CubeIDE projects showcased in the Embedded Systems Tutorial 2024
 
+The `Template` project is the basic project file where all sessions are derived from.
+
 # Sessions
 
 ## Session01
