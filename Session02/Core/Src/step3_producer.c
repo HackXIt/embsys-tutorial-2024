@@ -21,6 +21,17 @@ void ProducerTask(void *argument)
     osStatus_t ret;
     for (;;)
     {
+    	/*
+    	if(xQueuePeek((QueueHandle_t)producer_arugment.update_queue, (void*)&rx_data_object, 0))
+    	{
+    		if(rx_data_object.senderId == tx_data_object.senderId)
+    		{
+    			// Update the delay value
+    			delay = rx_data_object.value;
+    		}
+    		xQueueReceive()
+    	}
+    	*/
         ret = osMessageQueueGet(producer_argument.update_queue, &rx_data_object, NULL, 0);
         switch (ret)
         {
@@ -34,6 +45,7 @@ void ProducerTask(void *argument)
             {
                 // Not our message, put it back in the queue
                 osMessageQueuePut(producer_argument.update_queue, &rx_data_object, 0, 0);
+            	//xQueueSendToFront((QueueHandle_t)producer_arugment.update_queue)
             }
             break;
         case osErrorResource:

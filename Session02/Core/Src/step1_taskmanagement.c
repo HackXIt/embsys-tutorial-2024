@@ -9,7 +9,11 @@
 
 osThreadId_t producer_thread_id[NUM_PRODUCERS];
 uint32_t producer_thread_stack[NUM_PRODUCERS][PRODUCER_STACK_SIZE];
+// uint32_t producer1_thread_stack[PRODUCER_STACK_SIZE];
+// ...
 StaticTask_t producer_thread_control_block[NUM_PRODUCERS];
+// StaticTask_t producer1_thread_control_block;
+// ...
 // NOTE Initially provided values for the producers (Sets max limit to 10 producers, otherwise adjust the size of the array accordingly)
 uint32_t producer_initial_values[10] = {
     8, 4, 2, 6, 1, 9, 7, 3, 5, 0};
@@ -31,9 +35,9 @@ void CreateTasks()
         initializeProducerTaskAttributes(&producer_attributes[i],
                                          "ProducerTask",
                                          osPriorityLow,
-                                         producer_thread_stack[i],
+                                         producer_thread_stack[i], // alternativ: producer1_thread_stack
                                          PRODUCER_STACK_SIZE,
-                                         &producer_thread_control_block[i]);
+                                         &producer_thread_control_block[i]); // alternativ: producer1_thread_control_block
         producer_argument_t *producer_args = pvPortMalloc(sizeof(producer_argument_t));
         if (producer_args == NULL)
         {

@@ -23,7 +23,7 @@ void MonitoringTask(void *argument)
     uint8_t received_char;
     bool receiving = false;
     bool command_received = false;
-    char rx_uart_buffer[MONITOR_RX_UART_BUFFER_SIZE];
+    char rx_uart_buffer[MONITOR_RX_UART_BUFFER_SIZE]; // CMD: T# #
     uint8_t rx_uart_index = 0;
     osStatus_t ret;
     data_object_t rx_data_object = {
@@ -70,7 +70,7 @@ void MonitoringTask(void *argument)
         if (received_byte)
         {
             receiving = true;
-            printf("%c", received_char);
+            printf("%c", received_char); // ECHO Feedback
             if (received_char == '\r')
             {
                 rx_uart_buffer[rx_uart_index] = '\0';

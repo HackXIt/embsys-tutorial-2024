@@ -120,11 +120,8 @@ void MX_FREERTOS_Init(void) {
 __weak void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
-    /* Infinite loop */
-    for (;;)
-    {
-        osDelay(1);
-    }
+    CreateTask();
+    osThreadExit();
   /* USER CODE END StartDefaultTask */
 }
 
