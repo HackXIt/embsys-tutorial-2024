@@ -15,6 +15,10 @@
         {
             "name": "Session02",
             "path": "../Session02"
+        },
+        {
+            "name": "Session03",
+            "path": "../Session03"
         }
     ],
     "settings": {
@@ -29,7 +33,8 @@
             // Exclude workspace folders from root
             "Template/": true,
             "Session01/": true,
-            "Session02/": true
+            "Session02/": true,
+            "Session03/": true
         },
         "todo-tree.filtering.excludeGlobs": [
             // Exclude all files created by the STM32CubeMX tool or compilation
