@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug",
+            "cwd": "${workspaceFolder}",
+            "executable": "./build/${workspaceFolderBasename}.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            // Disabled due to bug in cortex-debug with RTOS support
+            // "runToEntryPoint": "main",
+            "servertype": "openocd",
+            "device": "STM32L432KC",
+            "configFiles": [
+                "interface/stlink-v2-1.cfg",
+                "target/stm32l4x.cfg"
+            ],
+            "armToolchainPath": "${env:ARMGCC_DIR}",
+            "serverpath": "${env:OPENOCD_DIR}/openocd",
+            "svdFile": "${env:STM32L4_SVD_DIR}/STM32L4x2.svd",
+            "rtos": "FreeRTOS",
+            "preLaunchTask": "build"
+        }
+    ]
+}

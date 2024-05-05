@@ -3,6 +3,6 @@
 
 #include "step1_taskmanagement.h"
 
-// void StartDefaultTask(void *argument);
+void StartDefaultTask(void *argument);
 
 #endif /* INC_ASSIGNMENT_MAIN_H_ */

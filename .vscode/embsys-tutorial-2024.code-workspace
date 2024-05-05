@@ -57,7 +57,8 @@
             "*.robot": "robotframework",
             "step1_taskmanagement.h": "c",
             "type_traits": "c",
-            "step3_producer.h": "c"
+            "step3_producer.h": "c",
+            "assignment_main.h": "c"
         }
     }
 }
